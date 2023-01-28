@@ -4,7 +4,11 @@ on:
     tags:
       - "*"
   workflow_dispatch:
-
+permissions:
+  # All other permissions are set to none
+  checks: write
+  contents: read
+  pull-requests: write
 jobs:
   release:
     runs-on: ubuntu-18.04
